@@ -1,0 +1,200 @@
+@charset "utf-8";
+/*사용한 font:  font-family: 'Orbitron', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap'); 
+
+/* RESET :html에 reset cdn넣어서 사실 없어도 되긴 함*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+/* COMMON */
+body{
+  /* background-color: hsl(0, 100%, 85%, .6); */
+  background-color: hsl(55, 26%, 84%, .6);
+}
+
+/* WRAP */
+.wrap{
+  width: 340px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius : 10px;
+  box-shadow: 10px 10px 30px rgba(0,0,0,.1);
+  /* 화면 위치 조정 */
+  position: absolute;
+  top: 50%;
+  right:50%;
+  transform:translate(-50% -50%);
+}
+
+/* NAV */
+.wrap .menu{
+  /* border: 1px solid lightgrey; */
+}
+
+.wrap .menu::after{
+  content: "";
+  display: block;
+  /* 사진 양쪽에 글씨를 안넣고 밑으로 내리는 속성 clear */
+  clear:both
+}
+
+.wrap .menu a{
+  font-size: 20px;
+  color: #c8c8c8
+}
+
+.wrap .menu a:first-child{
+  float: left;
+}
+
+.wrap .menu a:last-child{
+  float: right;
+}
+
+.wrap .menu i{
+  color: grey;
+}
+
+/* ARTICLE */
+.profile{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.profile > img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow:5px 15px 30px rgba(255, 180, 180, .5);
+}
+
+.wrap .profile h1{
+  /* line-height를 글자 크기만큼 넣는 단축키 "글자크기/1" */
+  font : bold 22px/1 "Orbitron";
+  color: #555;
+  margin: 20px 0px 10px 0px;
+}
+
+.wrap .profile p{
+  font:bold 14px/1 "Orbitron";
+  color:#999;
+  margin-bottom: 20px;
+}
+
+.wrap .profile .btnView{
+  display: block;
+  width: 180px;
+  height: 32px;
+  margin: 0px auto 20px;
+  background-color: #FFB4B4;
+  /* background-color: linear-gradient(45deg, rgb(255, 180, 180), rgb(255, 249, 202)); */
+  font:bold 12px/32px "Orbitron";
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 5px 10px 20px rgba(255, 180, 180, .3);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, .6);
+  letter-spacing: 1px;
+}
+
+/* CONTACT */
+.wrap .contact{
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.wrap .contact li{
+  width: 100%;
+  padding: 3px 0px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.wrap .contact li:last-child{
+  border-bottom: none ;
+}
+
+.wrap .contact li a{
+  color: #555;
+}
+
+.wrap .contact li i{
+  margin: 10px;
+  text-align: center;
+  font-size: 15px;
+  text-shadow: 2px 2px 2px rgb(221, 221, 221);
+  color: grey;
+  margin-right: 0 20px ;
+}
+
+.wrap .contact li span{
+  font: 13px/1 "Orbitron"; 
+  letter-spacing: 2;
+}
+
+/* OTHERS */
+.wrap .others{
+  text-align: center;
+  /* 아래 a태그에서 자동으로 spacebar 없애주기 우해 fz:0 */
+  font-size: 0px;
+}
+
+.wrap .others a{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FFB4B4;
+  margin: 0 10px;
+  opacity: .5;
+}
+
+.wrap .others a.on{
+  opacity: 1;
+}
+
+.wrap .others a:nth-of-type(1){
+  background-color: #FFB4B4;
+  box-shadow: 5px 5px 10px rgba(255, 180, 180, .5);
+}
+.wrap .others a:nth-of-type(2){
+  background-color: #FDA65D;
+  box-shadow: 5px 5px 10px rgba(253, 166, 93, .5);
+}
+.wrap .others a:nth-of-type(3){
+  background-color: #A9D8D8;
+  box-shadow: 5px 5px 10px rgb(169, 216, 216, .5);
+}
+
+/* CUSTOM */
+/* member_2 */
+.member_2 .wrap .profile > img{
+  box-shadow: 5px 15px 30px rgba(253, 166, 93, .5);
+}
+
+.member_2 .wrap .profile .btnView{
+  background-color: #FDA65D;
+  box-shadow: 5px 10px 20px rgba(255, 180, 180, .3);
+}
+
+/* member_3 */
+.member_3 .wrap .profile > img{
+  box-shadow: 5px 15px 30px rgba(169, 216, 216, .5);
+}
+.member_3 .wrap .profile > .btnView{
+  background-color: #A9D8D8;
+}
+.member_3 .wrap .profile .btnView{
+  background-color: #A9D8D8;
+  box-shadow: 5px 10px 20px rgba(169, 216, 216, .5);
+
+}
